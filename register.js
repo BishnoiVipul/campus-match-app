@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove the confirmPassword field as it's not needed by the backend.
         formData.delete('confirmPassword');
 
-        fetch('http://127.0.0.1:5000/signup', {
+        fetch('https://campus-match-app.onrender.com/signup', {
             method: 'POST',
             body: formData // Send the FormData object directly. No headers needed.
         })
