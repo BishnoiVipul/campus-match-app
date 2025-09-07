@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats - Campus Match</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="nav-brand">Campus Match</div>
+            <div id="welcome-message-container" class="user-welcome-text"></div>
+            <nav class="sidebar-nav">
+                <a href="/home.html" class="nav-link">Discover</a>
+                <a href="/my_profile.html" class="nav-link">My Profile</a>
+                 <a href="/chats.html" class="nav-link active">Chats</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logout-button">Logout</button>
+            </div>
+        </div>
+        <div class="chat-layout">
+            <div class="chat-sidebar">
+                <div class="chat-sidebar-header"><h2>Matches</h2></div>
+                <div id="match-list" class="chat-list"></div>
+            </div>
+            <div id="chat-window" class="chat-main-content">
+                <div id="chat-placeholder"><svg class="chat-placeholder-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.29 15.28l-1.33 3.33a.75.75 0 0 0 .96.96l3.33-1.33A10 10 0 1 0 12 2Zm0 18a8.5 8.5 0 1 1 8.5-8.5A8.51 8.51 0 0 1 12 20Z"/></svg><p class="chat-placeholder-text">Select a conversation</p></div>
+                <div id="conversation-container" class="conversation-container" style="display: none;">
+                    <div id="message-list" class="message-list"></div>
+                    <form id="message-form" class="message-form">
+                        <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+    <script src="/chats.js"></script>
+</body>
+</html>

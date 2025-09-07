@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Campus Match</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="nav-brand">Campus Match</div>
+            <div id="welcome-message-container" class="user-welcome-text"></div>
+            <nav class="sidebar-nav">
+                <a href="/home.html" class="nav-link">Discover</a>
+                <a href="/my_profile.html" class="nav-link active">My Profile</a>
+                <a href="/chats.html" class="nav-link">Chats</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logout-button">Logout</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="profile-page-header">
+                <h1>My Profile</h1>
+                <button id="edit-profile-btn" class="btn-primary-outline">Edit Profile</button>
+            </div>
+
+            <div id="profile-view-mode" class="profile-view-container">
+                <div class="profile-header">
+                    <div class="profile-avatar" id="profile-avatar"></div>
+                    <div class="profile-name-college">
+                        <h2 id="profile-fullName"></h2>
+                        <p id="profile-college"></p>
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <h3>About Me</h3>
+                    <p id="profile-bio"></p>
+                    <h3>Details</h3>
+                    <p><strong>Age:</strong> <span id="profile-age"></span></p>
+                    <p><strong>Gender:</strong> <span id="profile-gender"></span></p>
+                    <p><strong>Preference:</strong> <span id="profile-preference"></span></p>
+                    <h3>Interests</h3>
+                    <div class="card-interests" id="profile-interests"></div>
+                </div>
+            </div>
+
+            <div id="profile-edit-mode" class="profile-view-container" style="display: none;">
+                <h2>Edit Your Profile</h2>
+                <form id="edit-profile-form">
+                    <label for="edit-fullName">Full Name:</label>
+                    <input type="text" id="edit-fullName" name="fullName" required>
+
+                    <label for="edit-college">College:</label>
+                    <input type="text" id="edit-college" name="college" required>
+
+                    <label for="edit-age">Age:</label>
+                    <input type="number" id="edit-age" name="age" min="18" max="99" required>
+
+                    <label for="edit-bio">Bio:</label>
+                    <textarea id="edit-bio" name="bio" rows="4" required></textarea>
+
+                    <label>Interests (Select up to 5):</label>
+                    <div class="interest-tags-container" id="edit-interests">
+                        </div>
+
+                    <div class="form-buttons">
+                        <button type="button" id="cancel-edit-btn" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+    <script src="/my_profile.js"></script>
+</body>
+</html>
